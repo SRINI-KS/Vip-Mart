@@ -23,9 +23,6 @@ const routes: Routes = [
         path:'addproduct',component:AddProductComponent
       },
       {
-        path:'addproductcard',component:AddProductCardComponent
-      },
-      {
         path:'',redirectTo:'/admin/home',pathMatch:'full'
       },
     ]

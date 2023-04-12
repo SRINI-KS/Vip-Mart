@@ -11,13 +11,15 @@ import { NotFoundComponent } from './Components/Error/not-found/not-found.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AdminDashboardComponent } from './Roles/Admin/Components/admin-dashboard/admin-dashboard.component';
-import { HeaderComponent } from './Roles/Admin/Components/header/header.component';
+import { NavBarComponent } from './Roles/Admin/Components/nav-bar/nav-bar.component';
 import { FooterComponent } from './Roles/Admin/Components/footer/footer.component';
 import { HomeComponent } from './Roles/Admin/Components/home/home.component';
 import { UsersComponent } from './Roles/Admin/Components/users/users.component';
 import { OrderListComponent } from './Roles/Admin/Components/order-list/order-list.component';
 import { AddProductComponent } from './Roles/Admin/Components/add-product/add-product.component';
 import { AddProductCardComponent } from './Roles/Admin/Components/add-product-card/add-product-card.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { AddProductCardComponent } from './Roles/Admin/Components/add-product-ca
     RegisterComponent,
     NotFoundComponent,
     AdminDashboardComponent,
-    HeaderComponent,
+    NavBarComponent,
     FooterComponent,
     HomeComponent,
     UsersComponent,
@@ -40,7 +42,10 @@ import { AddProductCardComponent } from './Roles/Admin/Components/add-product-ca
     BrowserAnimationsModule,
     MaterialDesignModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
