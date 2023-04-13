@@ -3,4 +3,5 @@ export class User {
     emailId!:string;
     mobileNumber!:number;
     password!:string;
+    role!:string
 }

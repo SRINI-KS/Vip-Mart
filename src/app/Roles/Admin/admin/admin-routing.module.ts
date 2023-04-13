@@ -5,7 +5,6 @@ import { HomeComponent } from '../Components/home/home.component';
 import { UsersComponent } from '../Components/users/users.component';
 import { OrderListComponent } from '../Components/order-list/order-list.component';
 import { AddProductComponent } from '../Components/add-product/add-product.component';
-import { AddProductCardComponent } from '../Components/add-product-card/add-product-card.component';
 
 const routes: Routes = [
   {

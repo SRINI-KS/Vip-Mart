@@ -20,6 +20,11 @@ import { AddProductComponent } from './Roles/Admin/Components/add-product/add-pr
 import { AddProductCardComponent } from './Roles/Admin/Components/add-product-card/add-product-card.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserDashboardComponent } from './Roles/User/Components/user-dashboard/user-dashboard.component';
+import { MyOrderComponent } from './Roles/User/Components/my-order/my-order.component';
+import { ProductViewComponent } from './Roles/User/Components/product-view/product-view.component';
+import { UserHomeComponent } from './Roles/User/Components/user-home/user-home.component';
+import { UserNavBarComponent } from './Roles/User/Components/user-nav-bar/user-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +39,12 @@ import { HttpClientModule } from '@angular/common/http';
     UsersComponent,
     OrderListComponent,
     AddProductComponent,
-    AddProductCardComponent
+    AddProductCardComponent,
+    UserDashboardComponent,
+    MyOrderComponent,
+    ProductViewComponent,
+    UserHomeComponent,
+    UserNavBarComponent
   ],
   imports: [
     BrowserModule,
