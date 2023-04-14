@@ -4,6 +4,7 @@ import { UserDashboardComponent } from '../Components/user-dashboard/user-dashbo
 import { MyOrderComponent } from '../Components/my-order/my-order.component';
 import { ProductViewComponent } from '../Components/product-view/product-view.component';
 import { UserHomeComponent } from '../Components/user-home/user-home.component';
+import { ProfileComponent } from '../Components/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
       },
       {
         path:'productview',component:ProductViewComponent
+      },
+      {
+        path:'profile',component:ProfileComponent
       },
       {
         path:'',redirectTo:'/user/userhome',pathMatch:'full'

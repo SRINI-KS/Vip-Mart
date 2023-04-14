@@ -1,1 +1,70 @@
-<p>add-product works!</p>
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-lg-8 col-md-8  ">
+            <div class="card shadow-lg mt3">
+                <h5 class="card-header text-center">Add New Product</h5>
+                <div class="card-body">
+                    <form (ngSubmit)="addNewProduct()">
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="form-outline">
+                                    <input type="text" id="form6Example1" name="productCategory" [(ngModel)]="productData.category" class="form-control" />
+                                    <label class="form-label" for="form6Example1">Product Category</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-outline">
+                                    <input type="text" id="form6Example2"name="productSubCategory" [(ngModel)]="productData.subCategory" class="form-control" />
+                                    <label class="form-label" for="form6Example2">Product Sub Category</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form6Example3"name="productName" [(ngModel)]="productData.productName" class="form-control" />
+                            <label class="form-label" for="form6Example3">Product name</label>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form6Example4" name="price" [(ngModel)]="productData.productPrice" class="form-control" />
+                            <label class="form-label" for="form6Example4">Price</label>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <input class="form-control" type="file" name="image" [(ngModel)]="productData.productImage" id="form-label" multiple />
+
+                            <label class="form-label" for="form6Example5">Image</label>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <textarea class="form-control" id="form6Example7" name="productDiscription" [(ngModel)]="productData.productDiscription" rows="4"></textarea>
+                            <label class="form-label" for="form6Example7">Product Discription</label>
+                        </div>
+                        <div class=" text-center ">
+                            <div class="btn-group ">
+                                <!-- <button class="btn btn-secondary ">Reset</button> -->
+                                <button class="btn btn-success" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-8 col-md-auto preview  " *ngIf="productData">
+            <div class="card shadow-lg mt-3" style="width: 18rem;">
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjJW50hpEvvISqGfk-53enZSBMY4YsC_ewM52ZMq-KpA&usqp=CAU&ec=48665701" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{productData.productName}}</h5>
+                  <p class="card-text">{{productData.productDiscription}}</p>
+                </div>
+                
+                  <li class="list-group-item"><h3>{{productData.category}}</h3></li>
+                  <li class="list-group-item"><h4>{{productData.subCategory}}</h4></li>
+                  <li class="list-group-item text-center"><h2>{{productData.productPrice}}</h2></li>
+                
+              </div>
+        </div>
+    </div>
+</div>

@@ -7,15 +7,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item" routerLinkActive="active" style="padding-right: 50px;">
-                    <a class="nav-link" routerLink="addproduct">Add Product</a>
-                </li>
                 <li class=" btn-primary nav-item text-white" role="button">
-                    <a class="nav-link text-white" [matMenuTriggerFor]="menu" >Admin</a>
+                    <a class="nav-link text-white" [matMenuTriggerFor]="menu" >User</a>
                 </li>
                 <mat-menu #menu="matMenu">
-                  <button mat-menu-item routerLink="orderlist">Order List</button>
-                  <button mat-menu-item routerLink="users">Users</button>
+                  <button mat-menu-item routerLink="profile">Profile</button>
+                  <button mat-menu-item routerLink="myorder">My Order</button>
                   <button mat-menu-item (click)="logout()">Logout</button>
 
                 </mat-menu>
