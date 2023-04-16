@@ -1,1 +1,27 @@
-<p>order-list works!</p>
+<div class="container">
+    <div class="card">
+        <h1 class="card-title" align="center">Order List</h1>
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">S no</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Contact Number</th>
+        <th scope="col">Alternate Number</th>
+        <th scope="col">Address</th>
+        <th scope="col">Product Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of userOrderList">
+        <th scope="row">{{ item.orderId }}</th>
+        <td>{{ item.orderUserName }}</td>
+        <td>{{ item.orderUserContactNumber }}</td>
+        <td>{{ item.orderUserAlternateNumber }}</td>
+        <td>{{ item.orderUserAddress }}</td>
+        <td>{{ item.orderProductId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

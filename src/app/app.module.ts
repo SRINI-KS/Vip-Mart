@@ -12,14 +12,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AuthFunctionService } from './Services/Auth/AuthFunction/auth-function.service';
+import { AlertifyService } from './Services/Alert/alertify.service';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     NotFoundComponent,
-    
+       
   ],
   imports: [
     BrowserModule,
@@ -32,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthFunctionService,AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

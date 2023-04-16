@@ -11,7 +11,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class AddProductComponent {
   productData: ProductModel = {
     productName: '',
-    productPrice: null,
+    productPrice: 0,
     productDiscription: '',
     productImage: '',
     category: '',

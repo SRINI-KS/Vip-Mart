@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { User } from 'src/app/Models/User/user';
+import { AlertifyService } from 'src/app/Services/Alert/alertify.service';
 import { AuthFunctionService } from 'src/app/Services/Auth/AuthFunction/auth-function.service';
 import { LoginService } from 'src/app/Services/Auth/Login/login.service';
 
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private loginService: LoginService,
     private authFunction: AuthFunctionService,
-    private route: Router
+    private route: Router,
+    private alert:AlertifyService
   ) {}
 
   ngOnInit(): void {
@@ -37,11 +39,12 @@ export class LoginComponent implements OnInit {
       (response: User) => {
         console.log('response data' + response.userName);
         this.authFunction.setToken(response);
-
         this.routeFunction();
+        this.alert.success("login successfully")
+
       },
       (Error: HttpErrorResponse) => {
-        console.log(Error.error.message);
+        this.alert.error(Error.error.message)
       }
     );
   }
@@ -50,7 +53,7 @@ export class LoginComponent implements OnInit {
   routeFunction() {
     if (this.authFunction.isAdmin()) {
       this.route.navigate(['admin']);
-    } else if (this.authFunction.isAdmin()) {
+    } else if (this.authFunction.isUser()) {
       this.route.navigate(['user']);
     }
   }

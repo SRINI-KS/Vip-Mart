@@ -1,0 +1,29 @@
+
+<mat-card
+class="example-card mt-3"
+cols="2"
+MatCardAppearance="raised;"
+>
+<img
+  mat-card-image
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjJW50hpEvvISqGfk-53enZSBMY4YsC_ewM52ZMq-KpA&usqp=CAU&ec=48665701"
+  alt="Photo of a Shiba Inu"
+/>
+<mat-card-content>
+  <p>
+    <b>{{ p.productName }}</b>
+  </p>
+  <p>
+    {{ p.productDiscription }}
+  </p>
+  <p>
+    <b>{{ p.productPrice | currency : "INR" }}</b>
+  </p>
+</mat-card-content>
+<mat-card-actions align="end">
+  <button mat-raised-button routerLink="../order/{{p.productId}}">Buy</button>
+  <button mat-raised-button>Add to cart</button>
+</mat-card-actions>
+</mat-card>
+
+

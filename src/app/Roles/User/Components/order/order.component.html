@@ -1,0 +1,53 @@
+<div class="container">
+    <mat-card class="example-card shadow-lg mt-5">
+        <mat-card-title align="center"><h2>Check Out</h2></mat-card-title>
+        <form [formGroup]="firstFormGroup" (ngSubmit)=" getOrderData()">
+
+    <mat-stepper orientation="vertical" mode #stepper>
+            <mat-step [stepControl]="firstFormGroup">
+
+
+                <ng-template matStepLabel>Fill out your name</ng-template>
+
+                <mat-form-field appearance="outline" class="m-2">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Enter Your Name" formControlName="one" [(ngModel)]="orderData.orderUserName" required />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="m-2">
+                    <mat-label>Mobile Number</mat-label>
+                    <input matInput placeholder="Mobile Number" [(ngModel)]="orderData.orderUserContactNumber" formControlName="two" required />
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="m-2">
+                    <mat-label>Alternate Mobile Number</mat-label>
+                    <input matInput placeholder="Alternate Number" [(ngModel)]="orderData.orderUserAlternateNumber" formControlName="three" required />
+                </mat-form-field>
+
+
+
+            </mat-step>
+
+            <mat-step>
+                <ng-template matStepLabel>Fill out your address</ng-template>
+                <mat-form-field appearance="outline" class="m-2">
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="four" [(ngModel)]="orderData.orderUserAddress" placeholder="Ex. 1 Main St, New York, NY" required />
+                </mat-form-field>
+
+
+            </mat-step>
+            <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+
+                <div class="m-2">
+                    <button mat-button (click)="stepper.reset()">Reset</button>
+                    <button mat-raised-button type="submit"  color="primary">Place Order</button>
+
+                </div>
+            </mat-step>
+       
+    </mat-stepper>
+</form>
+</mat-card>
+</div>
