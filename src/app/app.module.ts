@@ -11,7 +11,7 @@ import { NotFoundComponent } from './Components/Error/not-found/not-found.compon
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AuthFunctionService } from './Services/Auth/AuthFunction/auth-function.service';
 import { AlertifyService } from './Services/Alert/alertify.service';
 @NgModule({
@@ -33,7 +33,7 @@ import { AlertifyService } from './Services/Alert/alertify.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AuthFunctionService,AlertifyService],
+  providers: [AuthFunctionService,AlertifyService,HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
